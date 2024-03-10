@@ -1,0 +1,19 @@
+{
+  "name": "rt-storage",
+  "version": "0.0.1",
+  "description": "Reference implementation of Rt storage to serve both GraphQL and RESTFul api.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["rule", "template", "storage", "RESTFul", "GraphQL", "api", "node", "express"],
+  "author": "Qiang Chen",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "graphql": "^16.8.1",
+    "graphql-http": "^1.22.0",
+    "ruru": "^2.0.0-beta.11",
+    "uuid": "^9.0.1"
+  }
+}

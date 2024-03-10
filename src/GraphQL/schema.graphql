@@ -1,0 +1,54 @@
+type Engine {
+  id: ID!
+  name: String
+  desc: String
+  tags: [String]
+  rules: [Rule]
+  shareId: String
+  syncId: String
+  keys: [String]
+}
+
+type Rule {
+  name: String
+  desc: String
+  action: Action!
+  templates: [String]
+}
+
+type Action {
+  annotate: String!
+}
+
+input EngineInput {
+  id: ID
+  name: String
+  desc: String
+  tags: [String]
+  rules: [RuleInput]
+  shareId: String
+  syncId: String
+  keys: [String]
+}
+
+input RuleInput {
+  name: String
+  desc: String
+  action: ActionInput
+  templates: [String]
+}
+
+input ActionInput {
+  annotate: String!
+}
+
+type Query {
+  engines: [Engine]!
+  engine(id: ID!): Engine
+}
+
+type Mutation {
+  createEngine(engine: EngineInput!): Engine!
+  updateEngine(engine: EngineInput!): Engine!
+  deleteEngine(id: ID!): Engine!
+}

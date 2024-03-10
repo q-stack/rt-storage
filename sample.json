@@ -1,0 +1,242 @@
+[
+  {
+    "id": "6ca2aa61-36cb-4f7b-89b5-bd568ff50345",
+    "name": "Angular: Tour of Heroes",
+    "desc": "At high level, this engine adds custom logic on top of Angular's \"Tour of Heroes\" tutorial application.  Calculate top heroes.  Make some heroes read only and protect some other heroes from being removed.  \n\nhttps://rt.qiangc.net/help/demo/angular-tour-of-heroes",
+    "tags": ["demo", "logic injection"],
+    "shareId": "",
+    "syncId": "",
+    "rules": [
+      {
+        "name": "Top heroes",
+        "desc": "If heroes name start with Dr., then mark it as top hero",
+        "action": {
+          "annotate": "top hero"
+        },
+        "templates": [
+          {
+            "name": "^Dr"
+          }
+        ]
+      },
+      {
+        "name": "Keep",
+        "desc": "Prevent been deleted",
+        "action": {
+          "annotate": "keep"
+        },
+        "templates": [
+          {
+            "id": "(13,15)"
+          }
+        ]
+      },
+      {
+        "name": "Read only",
+        "desc": "Update is not allowed.",
+        "action": {
+          "annotate": "readonly"
+        },
+        "templates": [
+          {
+            "name": "Magneta|Dynama"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8c4c60a7-72c5-4040-894a-db620d4f50d8",
+    "name": "React: Tic-Tac-Toe",
+    "desc": "The goal of this engine is to calculate O's move based on what is already taking one the board.  This engine will allow a user to play against the ruleset instead of playing both hand or need to find someone else to play.  The rulesets is for illustrations, not mean to be perfect.  \n\nhttps://rt.qiangc.net/help/demo/react-tic-tac-toe",
+    "tags": ["demo", "logic injection"],
+    "shareId": "",
+    "syncId": "",
+    "rules": [
+      {
+        "name": "0",
+        "desc": "cases to take 0",
+        "action": {
+          "annotate": "0"
+        },
+        "templates": [
+          {
+            "0": "!X|O",
+            "1": "X",
+            "2": "X"
+          },
+          {
+            "0": "!X|O",
+            "3": "X",
+            "6": "X"
+          },
+          {
+            "0": "!X|O",
+            "4": "X",
+            "8": "X"
+          }
+        ]
+      },
+      {
+        "name": "1",
+        "desc": "",
+        "action": {
+          "annotate": "1"
+        },
+        "templates": [
+          {
+            "0": "X",
+            "1": "!X|O",
+            "2": "X"
+          },
+          {
+            "1": "!X|O",
+            "4": "X",
+            "7": "X"
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "desc": "",
+        "action": {
+          "annotate": "2"
+        },
+        "templates": [
+          {
+            "0": "X",
+            "1": "X",
+            "2": "!X|O"
+          },
+          {
+            "2": "!X|O",
+            "4": "X",
+            "6": "X"
+          },
+          {
+            "2": "!X|O",
+            "5": "X",
+            "8": "X"
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "desc": "",
+        "action": {
+          "annotate": "3"
+        },
+        "templates": [
+          {
+            "0": "X",
+            "3": "!X|O",
+            "6": "X"
+          },
+          {
+            "3": "!X|O",
+            "4": "X",
+            "5": "X"
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "desc": "",
+        "action": {
+          "annotate": "4"
+        },
+        "templates": [
+          {
+            "4": "!X|O"
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "desc": "",
+        "action": {
+          "annotate": "5"
+        },
+        "templates": [
+          {
+            "2": "X",
+            "5": "!X|O",
+            "8": "X"
+          },
+          {
+            "3": "X",
+            "4": "X",
+            "5": "!X|O"
+          }
+        ]
+      },
+      {
+        "name": "6",
+        "desc": "",
+        "action": {
+          "annotate": "6"
+        },
+        "templates": [
+          {
+            "0": "X",
+            "3": "X",
+            "6": "!X|O"
+          },
+          {
+            "2": "X",
+            "4": "X",
+            "6": "!X|O"
+          },
+          {
+            "6": "!X|O",
+            "7": "X",
+            "8": "X"
+          }
+        ]
+      },
+      {
+        "name": "7",
+        "desc": "",
+        "action": {
+          "annotate": "7"
+        },
+        "templates": [
+          {
+            "1": "X",
+            "4": "X",
+            "7": "!X|O"
+          },
+          {
+            "6": "X",
+            "7": "!X|O",
+            "8": "X"
+          }
+        ]
+      },
+      {
+        "name": "8",
+        "desc": "",
+        "action": {
+          "annotate": "8"
+        },
+        "templates": [
+          {
+            "0": "X",
+            "4": "X",
+            "8": "!X|O"
+          },
+          {
+            "2": "X",
+            "5": "X",
+            "8": "!X|O"
+          },
+          {
+            "6": "X",
+            "7": "X",
+            "8": "!X|O"
+          }
+        ]
+      }
+    ]
+  }
+]
